@@ -1,0 +1,61 @@
+:root {
+    --surface: #EEE5E9;
+    --accent: #cc5803;
+    --fg:  #2b2521;
+/*
+    --surface: #111a16;
+    --fg: #d4dade;*/
+}
+
+body {
+    background: var(--surface);
+    margin: 0;
+    padding: 0;
+    color: var(--fg);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    overflow: hidden;
+}
+
+#border {
+    background: var(--surface);
+    margin: 0;
+    padding: 0;
+    color: var(--fg);
+}
+
+#hero-section {
+    background: var(--surface);
+    width: 100vw;
+    height: 100vh;
+}
+#hero-section .logo {
+    position: absolute;
+    height: 100vh;
+    mix-blend-mode: difference;
+    overflow: hidden;
+}
+img {
+    height: 100%;
+    width: 100%;
+}
+
+#projects-section {
+    background: var(--fg);
+    width: 100vh;
+    height: 100vh;
+}
+
+#cursor {
+    position: fixed;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color:#cc580344;
+}

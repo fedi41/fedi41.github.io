@@ -1,0 +1,48 @@
+:root {
+    --outline-color: black;
+
+}
+
+html {
+        font-size: 1dvw;
+}
+
+body {
+    /*background: #f4f0ea;
+    margin: 0;
+    padding: 40px 20px;
+    color: #2b2521;*/
+    font-family: 'Inter', sans-serif;
+
+
+}
+
+
+.huge-heading {
+    font-size: 14rem;
+}
+.medium-heading {
+    font-size: 5rem;
+}
+
+.outline-text {
+    --outline-color: black;
+    
+    text-shadow:
+        -0.05rem -0.05rem 0 black,
+         0.05rem -0.05rem 0 black,
+        -0.05rem  0.05rem 0 black,
+         0.05rem  0.05rem 0 black;
+}
+.centered-text {
+    text-align: center;
+}
+.color-accent {
+    color: var(--accent);
+}
+
+
+.f-fraunces { font-family: 'Fraunces', serif; font-optical-sizing: auto; }
+.f-cormorant { font-family: 'Cormorant Garamond', serif; }
+.f-sourceserif { font-family: 'Source Serif 4', serif; }
+.f-inter { font-family: 'Inter', sans-serif; }
