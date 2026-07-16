@@ -1,5 +1,5 @@
 :root {
-    --surface: #EEE5E9;
+    --surface: #f4f0ea;
     --accent: #cc5803;
     --fg:  #2b2521;
 /*
@@ -35,27 +35,42 @@ section {
     width: 100vw;
     height: 100vh;
 }
-#hero-section .logo {
-    position: absolute;
-    height: 100vh;
-    mix-blend-mode: difference;
-    overflow: hidden;
+
+
+.rounded {
+    border-radius: 50%;
 }
+
+#projects-section {
+    background: var(--fg);
+    width: 100vw;
+    height: 100vh;
+}
+
+
 img {
     height: 100%;
     width: 100%;
 }
 
-#projects-section {
-    background: var(--fg);
-    width: 100vh;
-    height: 100vh;
+#logo-container {
+    aspect-ratio: 1;
+    max-height: 100%;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
 }
 
-#cursor {
-    position: fixed;
-    width: 1rem;
-    height: 1rem;
-    border-radius: 50%;
-    background-color:#cc580344;
+.divider {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+
+    min-width: 0.2rem;
+    min-height: 0.2rem;
+    mix-blend-mode: difference;
+
+    border-radius: 10000px;
 }

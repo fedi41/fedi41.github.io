@@ -4,9 +4,15 @@
 }
 
 html {
-        font-size: 1dvw;
+    font-size: min(2dvh, 3.2dvw);
 }
 
+
+@media (max-aspect-ratio: 4/3) {
+    html {
+        font-size: min(2dvh, 3.2dvw);
+    }
+}
 body {
     /*background: #f4f0ea;
     margin: 0;
@@ -18,8 +24,8 @@ body {
 }
 
 
-.huge-heading {
-    font-size: 14rem;
+.big-heading {
+    font-size: 7rem;
 }
 .medium-heading {
     font-size: 5rem;
