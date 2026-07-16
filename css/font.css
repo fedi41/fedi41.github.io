@@ -24,11 +24,11 @@ body {
 }
 
 
-.big-heading {
-    font-size: 7rem;
-}
 .medium-heading {
-    font-size: 5rem;
+    font-size: 5.5rem;
+}
+.small-heading {
+    font-size: 3.5rem;
 }
 
 .outline-text {

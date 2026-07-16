@@ -24,6 +24,7 @@
 }
 #landing-heading {
     order: 4;
+    margin: auto;
     line-height: 0.8;
 }
 #landing-text {
@@ -51,7 +52,7 @@
 
     overflow: hidden;
 
-    outline: 0.1rem solid var(--accent);
+    outline: 0 solid var(--accent);
 
     transition: 1s all;
 }
