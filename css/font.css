@@ -23,12 +23,19 @@ body {
 
 }
 
-
-.medium-heading {
-    font-size: 5.5rem;
+/*FONT SIZES*/
+.bigger-then-medium-font {
+    font-size: 5rem;
 }
-.small-heading {
+.medium-font {
     font-size: 3.5rem;
+}
+.small-font {
+    font-size: 2rem;
+}
+
+.italic {
+    font-style: italic;
 }
 
 .outline-text {
