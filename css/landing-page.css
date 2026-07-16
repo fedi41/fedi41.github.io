@@ -54,7 +54,7 @@
 
     outline: 0 solid var(--accent);
 
-    transition: 1s all;
+    transition: 0.3s all;
 }
 
 #logo-container:hover {
