@@ -16,7 +16,7 @@
 
 #landing-logo {
     order: 1;
-    height: 50vh;
+    height: min(50vh, 80vw);
     margin: auto;
 }
 #landing-spacer1 {
