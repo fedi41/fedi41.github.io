@@ -24,6 +24,15 @@ body {
 }
 
 /*FONT SIZES*/
+.huge-font {
+    font-size: 12rem;
+}
+.large-font {
+    font-size: 9rem;
+}
+.big-font {
+    font-size: 7rem;
+}
 .bigger-then-medium-font {
     font-size: 5rem;
 }
@@ -39,13 +48,18 @@ body {
 }
 
 .outline-text {
-    --outline-color: black;
-    
-    text-shadow:
-        -0.05rem -0.05rem 0 black,
-         0.05rem -0.05rem 0 black,
-        -0.05rem  0.05rem 0 black,
-         0.05rem  0.05rem 0 black;
+  --outline-color: black;
+  --outline-width: 0.05rem;
+
+  text-shadow:
+    calc(var(--outline-width) * -1) calc(var(--outline-width) * -1) 0 var(--outline-color),
+    0 calc(var(--outline-width) * -1) 0 var(--outline-color),
+    var(--outline-width) calc(var(--outline-width) * -1) 0 var(--outline-color),
+    calc(var(--outline-width) * -1) 0 0 var(--outline-color),
+    var(--outline-width) 0 0 var(--outline-color),
+    calc(var(--outline-width) * -1) var(--outline-width) 0 var(--outline-color),
+    0 var(--outline-width) 0 var(--outline-color),
+    var(--outline-width) var(--outline-width) 0 var(--outline-color);
 }
 .centered-text {
     text-align: center;

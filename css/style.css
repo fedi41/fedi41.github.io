@@ -42,7 +42,6 @@ section {
 }
 
 #projects-section {
-    background: var(--fg);
     width: 100vw;
     height: 100vh;
 }
