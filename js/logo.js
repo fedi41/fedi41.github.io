@@ -2,7 +2,7 @@
 
 
 // ---- CONFIG: edit these to match your repo ----
-const GITHUB_OWNER  = "fedi41-prog";
+const GITHUB_OWNER  = "fedi41";
 const GITHUB_REPO   = "logos";
 const GITHUB_BRANCH = "main";
 const FOLDER_PATH   = "logos";

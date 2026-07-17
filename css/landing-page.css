@@ -60,7 +60,7 @@
 #logo-container:hover {
     border-radius: 2%;
     
-    outline: 0.5rem solid var(--accent);
+    outline: 0.3rem solid var(--accent);
 }
 
 
