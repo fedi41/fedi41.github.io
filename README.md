@@ -1,4 +1,4 @@
-# fedi41-prog.github.io
+# fedi41.github.io
 my own website
 
 btw its not finished :3
