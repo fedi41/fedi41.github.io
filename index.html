@@ -23,7 +23,33 @@ title: Fedor Karev
 <section id="projects-section">
     <div>
         <div style="height: 10vh; background-color: var(--fg);"></div>
-        <div class="outline-text color-accent big-font f-fraunces centered-text">Projects</div>
+        <div class="outline-text color-accent big-font f-fraunces centered-text">Featured projects</div>
     </div>
-    coming soon...
+    <div id="projects-grid">
+    {% assign sorted_projects = site.projects | sort: "order" %}
+    {% for project in sorted_projects %}
+    <div class="project-card" style="font-family: '{{ project.font | default: 'Fraunces' }}', serif; --card-accent: {{ project.accent | default: 'var(--accent)' }};">
+
+        {% if project.thumbnail %}
+        <div class="project-thumb" style="background-image: url('{{ project.thumbnail | relative_url }}');"></div>
+        {% endif %}
+
+        <h3 class="medium-font">
+            {{ project.title }}
+        </h3>
+        <p class="small-font">{{ project.description }}</p>
+
+        {% if project.tags %}
+        <div class="project-tags f-inter">
+            {% for tag in project.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
+        </div>
+        {% endif %}
+
+        <a class="project-btn {{ project.type }}" href="{{ project.url }}">
+            {% if project.type == "demo" %}Live demo →{% else %}View on GitHub →{% endif %}
+        </a>
+    </div>
+    {% endfor %}
+</div>
+
 </section>

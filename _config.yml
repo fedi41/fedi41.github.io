@@ -1,2 +1,13 @@
 title: Fedor Karev
 url: "https://fedi41.github.io"
+
+collections:
+  projects:
+    output: false
+    #sort_by: order
+defaults:
+  - scope:
+      path: ""
+      type: projects
+    values:
+      order: 999

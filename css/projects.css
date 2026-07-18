@@ -1,0 +1,54 @@
+
+#projects-section {
+    width: 100vw;
+    min-height: 100vh;
+}
+
+#projects-grid {
+    display: grid;
+    gap: 2rem;
+    margin: 10rem;
+
+    columns: 1f 1f;
+}
+
+.project-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.4rem 0.9rem;
+    border-radius: 1000px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: 0.2s all;
+}
+
+.project-btn.demo {
+    background: var(--card-accent);
+    color: var(--surface);
+    border: 0.1rem solid var(--card-accent);
+}
+.project-btn.demo:hover {
+    opacity: 0.85;
+}
+
+.project-btn.repo {
+    background: transparent;
+    color: var(--fg);
+    border: 0.1rem solid var(--fg);
+}
+.project-btn.repo:hover {
+    border-color: var(--card-accent);
+    color: var(--card-accent);
+}
+
+.project-tags .tag {
+    padding: 0.1rem;
+    border: 0.1rem solid var(--card-accent);
+    border-radius: 10000px;
+}
+
+.project-card {
+    border: 1rem solid var(--card-accent); 
+    padding: 1rem;
+    border-radius: 2rem;
+}
