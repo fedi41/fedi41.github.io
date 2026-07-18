@@ -58,9 +58,9 @@
 }
 
 #logo-container:hover {
-    border-radius: 2%;
+    border-radius: 5%;
     
-    outline: 0.2rem solid var(--accent);
+    outline: 0.1rem solid var(--accent);
 }
 
 

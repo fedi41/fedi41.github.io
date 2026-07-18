@@ -42,6 +42,9 @@ body {
 .small-font {
     font-size: 2rem;
 }
+.smaller-font {
+    font-size: 1.5rem;
+}
 
 .italic {
     font-style: italic;

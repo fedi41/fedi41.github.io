@@ -2,23 +2,33 @@
 #projects-section {
     width: 100vw;
     min-height: 100vh;
+
+    padding: auto;
 }
 
 #projects-grid {
     display: grid;
     gap: 2rem;
-    margin: 10rem;
+    margin: auto;
 
-    columns: 1f 1f;
+    width: auto;
+
+
+    grid-template-columns: 30rem 30rem;
 }
-
+@media (max-aspect-ratio: 4/3) {
+    #projects-grid {
+        grid-template-columns: auto;
+    }
+}
 .project-btn {
     display: inline-block;
-    margin-top: 1rem;
+    margin-top: auto;
+    align-self: end;
     padding: 0.4rem 0.9rem;
     border-radius: 1000px;
     text-decoration: none;
-    font-size: 0.85rem;
+    font-size: 2rem;
     transition: 0.2s all;
 }
 
@@ -43,12 +53,22 @@
 
 .project-tags .tag {
     padding: 0.1rem;
-    border: 0.1rem solid var(--card-accent);
-    border-radius: 10000px;
+    margin: 0.2rem;
+    margin-top: 1rem;
+
+    color: var(--accent);
 }
 
 .project-card {
-    border: 1rem solid var(--card-accent); 
+    display: flex;
+    flex-direction: column;
+
+    background-size: cover;
+    background-position: center;
+    
+    margin: 2rem;
+    outline: 0.3rem solid var(--card-accent);
     padding: 1rem;
     border-radius: 2rem;
+
 }

@@ -9,7 +9,7 @@ title: Fedor Karev
     <div id="landing-spacer1" class="divider"></div>
     <h1 id="landing-heading" class="centered-text">
         <div class="outline-text color-accent bigger-then-medium-font f-cormorant">Fedor Karev</div>
-        <div class="small-text f-fraunces">(Fedi41)</div>
+        <div class="small-text f-fraunces" style="font-weight: 100;">(Fedi41)</div>
     </h1>
     <p id="landing-text" class="f-cormorant small-font">
         Hi there! I'm <span class="f-fraunces">Fedor</span>, welcome to my corner of the web <span class="f-inter">:D</span>
@@ -28,25 +28,30 @@ title: Fedor Karev
     <div id="projects-grid">
     {% assign sorted_projects = site.projects | sort: "order" %}
     {% for project in sorted_projects %}
-    <div class="project-card" style="font-family: '{{ project.font | default: 'Fraunces' }}', serif; --card-accent: {{ project.accent | default: 'var(--accent)' }};">
+    <div 
+    class="project-card" 
+    style=" font-family: '{{ project.font | default: 'Fraunces' }}', serif; 
+            --card-accent: {{ project.accent | default: 'var(--accent)' }}; 
+            background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),url('{{ project.thumbnail | relative_url }}');">
 
         {% if project.thumbnail %}
         <div class="project-thumb" style="background-image: url('{{ project.thumbnail | relative_url }}');"></div>
         {% endif %}
 
-        <h3 class="medium-font">
+        <h3 class="medium-font" style="color: var(--card-accent);">
             {{ project.title }}
         </h3>
         <p class="small-font">{{ project.description }}</p>
 
+        <!--
         {% if project.tags %}
-        <div class="project-tags f-inter">
+        <div class="project-tags f-inter outline-text smaller-font">
             {% for tag in project.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
         </div>
         {% endif %}
-
+-->
         <a class="project-btn {{ project.type }}" href="{{ project.url }}">
-            {% if project.type == "demo" %}Live demo →{% else %}View on GitHub →{% endif %}
+            {% if project.type == "demo" %}Open site →{% else %}View on GitHub →{% endif %}
         </a>
     </div>
     {% endfor %}
