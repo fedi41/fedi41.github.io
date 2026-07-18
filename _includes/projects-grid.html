@@ -1,0 +1,32 @@
+<div id="projects-grid">
+            {% assign sorted_projects = site.projects | sort: "order" %}
+            {% for project in sorted_projects %}
+            <div 
+                class="project-card" 
+                style=" font-family: '{{ project.font | default: 'Fraunces' }}', serif; 
+                    --card-accent: {{ project.accent | default: 'var(--accent)' }}; 
+                    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),url('{{ project.thumbnail | relative_url }}');">
+
+<!--
+                {% if project.thumbnail %}
+                <div class="project-thumb" style="background-image: url('{{ project.thumbnail | relative_url }}');"></div>
+                {% endif %}
+-->        
+                <h3 class="medium-font" style="color: var(--card-accent); line-height: 1; margin-bottom: 0.5rem;">
+                    {{ project.title }}
+                </h3>
+                <p class="small-font" style="margin-bottom: 1rem; line-height: 1;">{{ project.description }}</p>
+            
+                <!--
+                {% if project.tags %}
+                <div class="project-tags f-inter outline-text smaller-font">
+                    {% for tag in project.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
+                </div>
+                {% endif %}-->
+
+                <a class="project-btn {{ project.type }}" href="{{ project.link }}">
+                    {% if project.type == "site" %}Open site →{% else %}View on GitHub →{% endif %}
+                </a>
+            </div>
+            {% endfor %}
+        </div>

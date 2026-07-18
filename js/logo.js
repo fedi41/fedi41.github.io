@@ -8,7 +8,7 @@ const GITHUB_BRANCH = "main";
 const FOLDER_PATH   = "logos";
 // -------------------------------------------------
 
-const SWITCH_INTERVAL_MS = 3000; // how long each logo stays on screen
+const SWITCH_INTERVAL_MS = 2000; // how long each logo stays on screen
 
 // ---- Bandwidth control ----
 // Raw PNGs from GitHub can easily be several MB each, and repeatedly cycling
@@ -27,7 +27,7 @@ const IMAGE_EXTENSIONS = [".png", ".jpg", ".jpeg", ".gif", ".webp", ".svg", ".bm
 
 
 let IMAGE_LIST = [];   // filled in automatically from the repo folder
-let currentIndex = 0;
+let currentIndex = 0; 
 let logoImg = null;
 let intervalId = null;
 

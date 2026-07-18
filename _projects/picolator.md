@@ -1,8 +1,8 @@
 ---
 title: Picolator
-description: handheld device, featuring a custom os
+description: a handheld device, featuring a custom os
 type: site
-url: https://fedi41.github.io/picolator2/
+link: https://fedi41.github.io/picolator2/
 tags: [raspberry pi, c++]
 accent: "#3a6ea5"
 font: "Jersey 10"

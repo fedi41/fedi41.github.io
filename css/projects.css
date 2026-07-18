@@ -17,6 +17,8 @@
     gap: 0rem;
     margin: auto;
 
+    max-width: 100%;
+
     
 
     grid-template-columns: 30rem 30rem;

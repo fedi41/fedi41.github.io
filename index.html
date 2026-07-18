@@ -2,62 +2,30 @@
 layout: default
 title: Fedor Karev
 ---
-<div id="landing-grid">
-    <div id="landing-logo">
-        <div id="logo-container" class="rounded"></div>
-    </div>
-    <div id="landing-spacer1" class="divider"></div>
-    <h1 id="landing-heading" class="centered-text">
-        <div class="outline-text color-accent bigger-then-medium-font f-cormorant">Fedor Karev</div>
-        <div class="small-text f-fraunces" style="font-weight: 100;">(Fedi41)</div>
-    </h1>
-    <p id="landing-text" class="f-cormorant small-font">
-        Hi there! I'm <span class="f-fraunces">Fedor</span>, welcome to my corner of the web <span class="f-inter">:D</span>
-    </p>
-    <div id="landing-spacer2" class="divider"></div>
-    <p id="landing-links" class="f-cormorant small-font">
-        This website is in active work!
-    </p>
-</div>
+{% include landing-section.html %}
 
+<div class="nav" style="position: sticky; top: 0; z-index: 100; height: 7vh; background-color: white; mix-blend-mode: difference; ">
+    <div class="nav-container" style="mix-blend-mode: difference;">
+        <div class="nav-left">
+            <a href="{{ '/' | relative_url }}" class="nav-logo f-fraunces outline-text color-accent">Fedi41</a>
+        </div>
+        <div class="nav-right">
+            <a href="{{ '/#projects-section' | relative_url }}" class="nav-link f-fraunces outline-text color-accent">Projects</a>
+            <a href="{{ '/#contact-section' | relative_url }}" class="nav-link f-fraunces outline-text color-accent">Contact</a>
+        </div>
+    </div>
+</div>
 <section id="projects-section">
     <div>
-        <div style="height: 10vh; background-color: var(--fg);"></div>
-        <div class="outline-text color-accent big-font f-fraunces centered-text" style="line-height: 0.8; margin: 1.5rem 0;">Featured projects</div>
+        <div class="outline-text color-accent big-font f-fraunces centered-text" style="line-height: 0.8; margin: 3rem 0; padding: 0; max-width: 100%;">Featured projects</div>
     </div>
+
+
     <div class="center-flex">
-        <div id="projects-grid">
-            {% assign sorted_projects = site.projects | sort: "order" %}
-            {% for project in sorted_projects %}
-            <div 
-                class="project-card" 
-                style=" font-family: '{{ project.font | default: 'Fraunces' }}', serif; 
-                    --card-accent: {{ project.accent | default: 'var(--accent)' }}; 
-                    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),url('{{ project.thumbnail | relative_url }}');">
-
-<!--
-                {% if project.thumbnail %}
-                <div class="project-thumb" style="background-image: url('{{ project.thumbnail | relative_url }}');"></div>
-                {% endif %}
--->        
-                <h3 class="medium-font" style="color: var(--card-accent);">
-                    {{ project.title }}
-                </h3>
-                <p class="small-font" style="margin-bottom: 1rem;">{{ project.description }}</p>
-            
-                <!--
-                {% if project.tags %}
-                <div class="project-tags f-inter outline-text smaller-font">
-                    {% for tag in project.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
-                </div>
-                {% endif %}-->
-
-                <a class="project-btn {{ project.type }}" href="{{ project.url }}">
-                    {% if project.type == "site" %}Open site →{% else %}View on GitHub →{% endif %}
-                </a>
-            </div>
-            {% endfor %}
-        </div>
+        {% include projects-grid.html %}
     </div>
 
 </section>
+
+
+<div style="height: 100rem;"></div>
