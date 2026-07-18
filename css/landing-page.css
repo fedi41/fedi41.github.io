@@ -26,6 +26,7 @@
     order: 4;
     margin: auto;
     line-height: 0.8;
+    text-wrap: nowrap;
 }
 #landing-text {
     order: 3;

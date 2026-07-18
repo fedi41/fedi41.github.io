@@ -2,17 +2,22 @@
 #projects-section {
     width: 100vw;
     min-height: 100vh;
+}
 
-    padding: auto;
+.center-flex {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #projects-grid {
     display: grid;
-    gap: 2rem;
+    gap: 0rem;
     margin: auto;
 
-    width: auto;
-
+    
 
     grid-template-columns: 30rem 30rem;
 }
@@ -32,12 +37,12 @@
     transition: 0.2s all;
 }
 
-.project-btn.demo {
+.project-btn.site {
     background: var(--card-accent);
     color: var(--surface);
     border: 0.1rem solid var(--card-accent);
 }
-.project-btn.demo:hover {
+.project-btn.site:hover {
     opacity: 0.85;
 }
 
@@ -66,7 +71,7 @@
     background-size: cover;
     background-position: center;
     
-    margin: 2rem;
+    margin: 1rem;
     outline: 0.3rem solid var(--card-accent);
     padding: 1rem;
     border-radius: 2rem;

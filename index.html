@@ -23,38 +23,41 @@ title: Fedor Karev
 <section id="projects-section">
     <div>
         <div style="height: 10vh; background-color: var(--fg);"></div>
-        <div class="outline-text color-accent big-font f-fraunces centered-text">Featured projects</div>
+        <div class="outline-text color-accent big-font f-fraunces centered-text" style="line-height: 0.8; margin: 1.5rem 0;">Featured projects</div>
     </div>
-    <div id="projects-grid">
-    {% assign sorted_projects = site.projects | sort: "order" %}
-    {% for project in sorted_projects %}
-    <div 
-    class="project-card" 
-    style=" font-family: '{{ project.font | default: 'Fraunces' }}', serif; 
-            --card-accent: {{ project.accent | default: 'var(--accent)' }}; 
-            background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),url('{{ project.thumbnail | relative_url }}');">
+    <div class="center-flex">
+        <div id="projects-grid">
+            {% assign sorted_projects = site.projects | sort: "order" %}
+            {% for project in sorted_projects %}
+            <div 
+                class="project-card" 
+                style=" font-family: '{{ project.font | default: 'Fraunces' }}', serif; 
+                    --card-accent: {{ project.accent | default: 'var(--accent)' }}; 
+                    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),url('{{ project.thumbnail | relative_url }}');">
 
-        {% if project.thumbnail %}
-        <div class="project-thumb" style="background-image: url('{{ project.thumbnail | relative_url }}');"></div>
-        {% endif %}
+<!--
+                {% if project.thumbnail %}
+                <div class="project-thumb" style="background-image: url('{{ project.thumbnail | relative_url }}');"></div>
+                {% endif %}
+-->        
+                <h3 class="medium-font" style="color: var(--card-accent);">
+                    {{ project.title }}
+                </h3>
+                <p class="small-font" style="margin-bottom: 1rem;">{{ project.description }}</p>
+            
+                <!--
+                {% if project.tags %}
+                <div class="project-tags f-inter outline-text smaller-font">
+                    {% for tag in project.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
+                </div>
+                {% endif %}-->
 
-        <h3 class="medium-font" style="color: var(--card-accent);">
-            {{ project.title }}
-        </h3>
-        <p class="small-font">{{ project.description }}</p>
-
-        <!--
-        {% if project.tags %}
-        <div class="project-tags f-inter outline-text smaller-font">
-            {% for tag in project.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
+                <a class="project-btn {{ project.type }}" href="{{ project.url }}">
+                    {% if project.type == "site" %}Open site →{% else %}View on GitHub →{% endif %}
+                </a>
+            </div>
+            {% endfor %}
         </div>
-        {% endif %}
--->
-        <a class="project-btn {{ project.type }}" href="{{ project.url }}">
-            {% if project.type == "demo" %}Open site →{% else %}View on GitHub →{% endif %}
-        </a>
     </div>
-    {% endfor %}
-</div>
 
 </section>
