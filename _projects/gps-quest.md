@@ -3,7 +3,7 @@ title: GPS-quest
 description: a simple app for playing, sharing and creating quests
 type: repo
 link: https://github.com/fedi41/GPS-quest
-tags: [android, kotlin]
+# tags: [android, kotlin]
 accent: "#a53f3a"
 
 #thumbnail: 
