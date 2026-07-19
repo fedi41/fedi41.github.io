@@ -1,0 +1,21 @@
+:root {
+    --nav-height: 8vh
+}
+
+@media (max-aspect-ratio: 4/3) {
+    :root {
+        --nav-height: 12vh
+    }
+}
+
+.nav {
+    position: sticky;
+    top: 0;
+    z-index: 100; 
+    height: var(--nav-height); 
+    background-color: white; 
+    mix-blend-mode: difference; 
+}
+.nav-container {
+    mix-blend-mode: difference;
+}
