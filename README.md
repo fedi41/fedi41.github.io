@@ -21,3 +21,7 @@ This is a simple website to make my projects easier accessible.
   - contains all the stuff I did as a coder
 - better bio / about section
 - hobbys/interests page
+
+
+## AI usage
+I used AI to code the dynamic logo loading, and sometimes for debugging or research
