@@ -8,14 +8,33 @@
     }
 }
 
+
+
 .nav {
     position: sticky;
-    top: 0;
+    top: 0; 
     z-index: 100; 
     height: var(--nav-height); 
-    background-color: white; 
-    mix-blend-mode: difference; 
+    background-color:white; 
+    mix-blend-mode:difference; 
 }
 .nav-container {
-    mix-blend-mode: difference;
+    mix-blend-mode: normal;
+
+    display: flex;
+    flex-direction: row;
+
+    height: 100%;
+}
+
+.nav-link {
+    flex: 1 1 0;
+    text-align: center;
+    font-size: 2rem;
+
+    text-decoration: none;
+
+    /* border: 0.2rem solid red; */
+    /* border-radius: 1rem; */
+
 }
