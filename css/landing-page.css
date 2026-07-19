@@ -28,13 +28,13 @@
     line-height: 0.8;
     text-wrap: nowrap;
 }
-#landing-text {
+#landing-text1 {
     order: 3;
 }
 #landing-spacer2 {
     order: 5;
 }
-#landing-links {
+#landing-text2 {
     order: 6;
 }
 
@@ -82,14 +82,16 @@
     #landing-heading {
         order: 1;
     }
-    #landing-text {
+    #landing-text1 {
         order: 4;
+        display: none;
     }
     #landing-spacer2 {
-        order: 5;
-    }
-    #landing-links {
         order: 6;
+        display: none;
+    }
+    #landing-text2 {
+        order: 5;
     }
 
 }

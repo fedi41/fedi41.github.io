@@ -15,8 +15,8 @@
     top: 0; 
     z-index: 100; 
     height: var(--nav-height); 
-    background-color:white; 
-    mix-blend-mode:difference; 
+    background-color:var(--fg); 
+    mix-blend-mode:multiply; 
 }
 .nav-container {
     mix-blend-mode: normal;
