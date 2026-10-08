@@ -1,18 +1,11 @@
 :root {
-    --nav-height: 5dvh
+    --nav-height: 5dvh;
+    --nav-top: 0;
 }
-
-@media (max-aspect-ratio: 4/3) {
-    :root {
-        --nav-height: 10dvh
-    }
-}
-
-
 
 .nav {
     position: sticky;
-    top: 0; 
+    top: var(--nav-top); 
     z-index: 100; 
     height: var(--nav-height); 
     background-color:var(--fg); 
@@ -43,4 +36,10 @@
 
 .nav-link:hover {
     color: white;
+}
+
+@media (max-aspect-ratio: 4/3) {
+    :root {
+        --nav-height: 5dvh
+    } 
 }

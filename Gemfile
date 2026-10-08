@@ -1,8 +1,9 @@
 source "https://rubygems.org"
 
-gem "jekyll", "~> 4.3"
+gem "jekyll"
 gem "webrick"
 gem "csv"
 gem "base64"
 gem "logger"
 gem "bigdecimal"
+gem "erb"
